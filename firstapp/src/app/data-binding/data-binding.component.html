@@ -1,0 +1,33 @@
+<div class="container border border-primary">
+
+    <h1>Data Binding</h1>
+    <ul>
+        <li>One Way Data Binding</li>
+        <ol>
+            <li>Interpolation</li>
+            <p>{{firstname}} {{lastname}} {{age}} {{add}}</p>
+            <p>{{4+10}}</p>
+
+            <li>Property Binding</li>
+            <!-- property binding : you need to use [] -->
+            <input type="text" [value]="firstname">
+            <input type="number" [value]="age">
+            <input type="text" [placeholder]="lastname">
+
+            <li>Event Binding</li>
+            <!-- Event Binding: you need to use () -->
+            <button class="btn btn-primary" (dblclick)="showAlert()">Click</button>
+
+            <li>Style Binding</li>
+     <!-- style.color:color=css property  "color"=ts file ke property ka name-->
+            <p [style.color]="color">Property Binding</p>
+            <!-- <p [style.background-color]="backgroundcolor">Property Binding</p> -->
+            <h1 [style.border]="border">Hello</h1>
+            <h2 [style.background-color]="backgroundcolor">Background Color</h2>
+
+        </ol>
+        <li>Two Way Data Binding</li>
+        <input type="text" [(ngModel)]="firstname">
+    </ul>
+
+</div>
